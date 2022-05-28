@@ -1,0 +1,3 @@
+# kuramoto
+
+kuramoto model
