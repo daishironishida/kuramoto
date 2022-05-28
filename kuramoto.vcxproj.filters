@@ -122,6 +122,9 @@
     <ClInclude Include="src\Angle.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\Oscillator.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-#include "Angle.h"
+#include "Oscillator.h"
 
 class ofApp : public ofBaseApp {
 
@@ -24,6 +24,6 @@ public:
 	void gotMessage(ofMessage msg);
 
 private:
-	Angle angle;
+	std::vector<Oscillator> oscillators;
 
 };
