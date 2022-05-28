@@ -30,6 +30,6 @@ private:
 
 	// parameters
 	int N = 5;
-	float K = 1.f;
+	float K = 10.f;
 
 };

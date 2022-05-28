@@ -9,7 +9,7 @@ public:
 
 	Angle operator+ (const Angle& other) const
 	{
-		return Angle(std::fmod(theta + other.theta, 2 * PI));
+		return Angle(mod(theta + other.theta));
 	}
 	Angle& operator= (const Angle& other)
 	{
@@ -18,7 +18,7 @@ public:
 	}
 	Angle& operator+= (const Angle& other)
 	{
-		theta = std::fmod(theta + other.theta, 2 * PI);
+		theta = mod(theta + other.theta);
 		return *this;
 	}
 
@@ -26,5 +26,9 @@ public:
 
 private:
 	float theta = 0;
+
+	static float mod(const float val) {
+		return std::fmod(std::fmod(val, 2 * PI) + 2 * PI, 2 * PI);
+	}
 };
 
