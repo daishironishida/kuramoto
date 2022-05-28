@@ -28,4 +28,8 @@ private:
 	std::vector<Oscillator> oscillators;
 	std::shared_ptr<AbstractVisualizer> visualizer;
 
+	// parameters
+	int N = 5;
+	float K = 1.f;
+
 };

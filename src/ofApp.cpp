@@ -7,13 +7,17 @@ void ofApp::setup() {
 	ofSetBackgroundColor(0);
 
 	visualizer = std::make_shared<CircleVisualizer>();
-	oscillators.resize(5);
+	oscillators.resize(N);
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
 	for (Oscillator& osc : oscillators) {
-		osc.update(0);
+		float interaction = 0;
+		for (Oscillator& other : oscillators) {
+			interaction += std::sin(osc.getAngle() - other.getAngle()) * K / N;
+		}
+		osc.update(interaction);
 	}
 
 	visualizer->update(oscillators);
