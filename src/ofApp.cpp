@@ -7,7 +7,7 @@ void ofApp::setup() {
 	ofSetBackgroundColor(0);
 
 	visualizer = std::make_shared<CircleVisualizer>();
-	oscillators.resize(N);
+	oscillators.resize(N, Oscillator(sigma));
 }
 
 //--------------------------------------------------------------

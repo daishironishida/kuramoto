@@ -31,5 +31,6 @@ private:
 	// parameters
 	int N = 5;
 	float K = 10.f;
+	float sigma = 0.1f;
 
 };

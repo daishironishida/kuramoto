@@ -5,8 +5,8 @@
 
 class Oscillator {
 public:
-	Oscillator() {
-		freqNatural = ofRandom(-1, 1);
+	Oscillator(float sigma = 0.1f) {
+		freqNatural = ofRandom(-sigma, sigma);
 	};
 
 	void update(float interaction) {
