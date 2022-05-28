@@ -1,7 +1,12 @@
 #include "ofApp.h"
 
+#include "visualizer/CircleVisualizer.h"
+
 //--------------------------------------------------------------
 void ofApp::setup() {
+	ofSetBackgroundColor(0);
+
+	visualizer = std::make_shared<CircleVisualizer>();
 	oscillators.resize(5);
 }
 
@@ -10,11 +15,13 @@ void ofApp::update() {
 	for (Oscillator& osc : oscillators) {
 		osc.update(0);
 	}
+
+	visualizer->update(oscillators);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-
+	visualizer->draw();
 }
 
 //--------------------------------------------------------------

@@ -9,9 +9,12 @@ public:
 		freqNatural = ofRandom(-1, 1);
 	};
 
-
 	void update(float interaction) {
 		theta += freqNatural + interaction;
+	}
+
+	float getAngle() const {
+		return theta;
 	}
 
 private:

@@ -43,6 +43,9 @@
     <ClCompile Include="..\..\..\addons\ofxImGui\libs\imgui\src\imgui_widgets.cpp">
       <Filter>addons\ofxImGui\libs\imgui\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\visualizer\CircleVisualizer.cpp">
+      <Filter>src\visualizer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -65,6 +68,9 @@
     </Filter>
     <Filter Include="addons\ofxImGui\libs\imgui\src">
       <UniqueIdentifier>{5962BF19-1468-EB82-01C0-2E72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\visualizer">
+      <UniqueIdentifier>{b541a2c5-b775-4be3-a4a5-9b10f5c497a6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +130,12 @@
     </ClInclude>
     <ClInclude Include="src\Oscillator.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\visualizer\AbstractVisualizer.h">
+      <Filter>src\visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\visualizer\CircleVisualizer.h">
+      <Filter>src\visualizer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

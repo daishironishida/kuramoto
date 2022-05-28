@@ -3,6 +3,7 @@
 #include "ofMain.h"
 
 #include "Oscillator.h"
+#include "visualizer/AbstractVisualizer.h"
 
 class ofApp : public ofBaseApp {
 
@@ -25,5 +26,6 @@ public:
 
 private:
 	std::vector<Oscillator> oscillators;
+	std::shared_ptr<AbstractVisualizer> visualizer;
 
 };

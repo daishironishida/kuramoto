@@ -194,6 +194,7 @@
     <ClCompile Include="..\..\..\addons\ofxImGui\libs\imgui\src\imgui_demo.cpp" />
     <ClCompile Include="..\..\..\addons\ofxImGui\libs\imgui\src\imgui_draw.cpp" />
     <ClCompile Include="..\..\..\addons\ofxImGui\libs\imgui\src\imgui_widgets.cpp" />
+    <ClCompile Include="src\visualizer\CircleVisualizer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Angle.h" />
@@ -215,6 +216,8 @@
     <ClInclude Include="..\..\..\addons\ofxImGui\libs\imgui\src\imstb_textedit.h" />
     <ClInclude Include="..\..\..\addons\ofxImGui\libs\imgui\src\imstb_truetype.h" />
     <ClInclude Include="src\Oscillator.h" />
+    <ClInclude Include="src\visualizer\AbstractVisualizer.h" />
+    <ClInclude Include="src\visualizer\CircleVisualizer.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
