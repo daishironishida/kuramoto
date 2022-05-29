@@ -3,6 +3,8 @@
 #include <cmath>
 #include <iostream>
 
+#include "ofMain.h"
+
 class Angle {
 public:
 	Angle(float t = 0) : theta(t) {};

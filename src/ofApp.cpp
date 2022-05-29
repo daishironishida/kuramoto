@@ -17,7 +17,7 @@ void ofApp::reset() {
 
 	oscillators.clear();
 	for (int i = 0; i < N; i++) {
-		oscillators.emplace_back();
+		oscillators.emplace_back(sigma);
 	}
 }
 
