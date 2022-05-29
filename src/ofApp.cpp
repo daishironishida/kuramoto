@@ -13,8 +13,11 @@ void ofApp::setup() {
 //--------------------------------------------------------------
 void ofApp::reset() {
 	visualizer = std::make_shared<CircleVisualizer>();
+
 	oscillators.clear();
-	oscillators.resize(N, Oscillator(sigma));
+	for (int i = 0; i < N; i++) {
+		oscillators.emplace_back();
+	}
 }
 
 //--------------------------------------------------------------
