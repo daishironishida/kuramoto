@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxImGui.h"
 
 #include "Oscillator.h"
 #include "visualizer/AbstractVisualizer.h"
@@ -28,9 +29,12 @@ private:
 	std::vector<Oscillator> oscillators;
 	std::shared_ptr<AbstractVisualizer> visualizer;
 
+	// gui
+	ofxImGui::Gui gui;
+	bool isDrawGui = false;
+
 	// parameters
 	int N = 5;
 	float K = 10.f;
 	float sigma = 0.1f;
-
 };
