@@ -12,6 +12,7 @@ void ofApp::setup() {
 
 //--------------------------------------------------------------
 void ofApp::reset() {
+	N = numOscillators;
 	visualizer = std::make_shared<CircleVisualizer>();
 
 	oscillators.clear();
@@ -42,7 +43,7 @@ void ofApp::draw() {
 	}
 	gui.begin();
 	ImGui::Begin("Settings");
-	ImGui::SliderInt("N", &N, 1, 1000);
+	ImGui::SliderInt("N", &numOscillators, 1, 1000);
 	ImGui::SliderFloat("K", &K, 0.f, 100.f);
 	ImGui::SliderFloat("sigma", &sigma, 0.f, 100.f);
 
