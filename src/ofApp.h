@@ -29,6 +29,8 @@ private:
 	std::vector<Oscillator> oscillators;
 	std::shared_ptr<AbstractVisualizer> visualizer;
 
+	void reset();
+
 	// gui
 	ofxImGui::Gui gui;
 	bool isDrawGui = false;

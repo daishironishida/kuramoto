@@ -7,7 +7,13 @@ void ofApp::setup() {
 	ofSetBackgroundColor(0);
 	gui.setup();
 
+	reset();
+}
+
+//--------------------------------------------------------------
+void ofApp::reset() {
 	visualizer = std::make_shared<CircleVisualizer>();
+	oscillators.clear();
 	oscillators.resize(N, Oscillator(sigma));
 }
 
@@ -36,6 +42,10 @@ void ofApp::draw() {
 	ImGui::SliderInt("N", &N, 1, 1000);
 	ImGui::SliderFloat("K", &K, 0.f, 100.f);
 	ImGui::SliderFloat("sigma", &sigma, 0.f, 100.f);
+
+	if (ImGui::Button("Reset")) {
+		reset();
+	}
 	ImGui::End();
 	gui.end();
 }
